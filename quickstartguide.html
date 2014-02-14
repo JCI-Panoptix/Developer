@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html>
   <head>
@@ -52,68 +51,72 @@
 <p></p>
 <h4>One &ndash; Create a Panoptix Developer Center account.</h4>
 <p></p>
-<ol><a href="https://developer.panoptix.com/signup">Sign up for API access.</a> Enter your user and company information.</ol>
-<p style="padding-left: 30px;">2. Read and agree to the Johnson Controls, Inc. API Usage Agreement and click &ldquo;Sign Up.&rdquo;</p>
-<p style="padding-left: 30px;">3. Upon receiving approval via email (may take up to two business days), sign in to your account.</p>
-<p style="padding-left: 30px;">4. Under Sandbox, click &ldquo;View&rdquo; next to Demo app.</p>
-<p style="padding-left: 30px;"></p>
-<p style="padding-left: 30px;"><img alt="Step One_Select Applications.png"  src="https://github.com/JCI-Panoptix/Developer/images/TBD"></p>
-<p style="padding-left: 30px;"></p>
-<p style="padding-left: 30px;">5. Record the Client ID and Client Secret.</p>
-<p style="padding-left: 30px;"></p>
-<p style="padding-left: 30px;"><img alt="Step One_Record the Client ID and Client Secret.png" src="https://github.com/JCI-Panoptix/Developer/images/TBD" ></p>
-<p style="padding-left: 30px;"></p>
-<p style="padding-left: 30px;">6. Record your Freemium Panoptix Credential (username and password).</p>
+<ol>
+<li><a href="https://developer.panoptix.com/signup">Sign up for API access.</a> Enter your user and company information.</li>
+<li>Read and agree to the Johnson Controls, Inc. API Usage Agreement and click &ldquo;Sign Up.&rdquo;</li>
+<li>Upon receiving approval via email (may take up to two business days), sign in to your account.</li>
+<li>Under Sandbox, click &ldquo;View&rdquo; next to Demo app.</li>
 <p></p>
-<p style="padding-left: 30px;"><img alt="Step One_Record your Freemium.png" class="jive-image jive-image-thumbnail" src="/servlet/JiveServlet/downloadImage/102-2181-8-2985/Step+One_Record+your+Freemium.png" width="620" __jive_id="2985" /></p>
+<p><img alt="Step One_Select Applications.png"  src="https://github.com/JCI-Panoptix/Developer/images/TBD"></p>
+<p></p>
+<li>Record the Client ID and Client Secret.</li>
+<p></p>
+<p><img alt="Step One_Record the Client ID and Client Secret.png" src="https://github.com/JCI-Panoptix/Developer/images/TBD" ></p>
+<p></p>
+<li>Record your Freemium Panoptix Credential (username and password).</li>
+<p></p>
+<p><img alt="Step One_Record your Freemium.png" class="jive-image jive-image-thumbnail" src="/servlet/JiveServlet/downloadImage/102-2181-8-2985/Step+One_Record+your+Freemium.png" width="620" __jive_id="2985" /></p>
+</ol>
 <p></p>
 <h4>Two &ndash; Request access token.</h4>
 <p></p>
-<p style="padding-left: 30px;">1. Download and install <a href="https://chrome.google.com/webstore/detail/hgmloofddffdnphfgcellkdfbfbjeloo">Chrome Advanced Rest Client App</a>.</p>
-<p style="padding-left: 30px;">2. Create https POST request against the URL:</p>
+<ol>
+<li>Download and install <a href="https://chrome.google.com/webstore/detail/hgmloofddffdnphfgcellkdfbfbjeloo">Chrome Advanced Rest Client App</a>.</li>
+<li>Create https POST request against the URL:</li>
 <p></p>
-<p style="padding-left: 30px;"><a class="jive-link-external-small" href="https://mypanoptixstaging.johnsoncontrols.com/identity/issue/oauth2/token">     https://mypanoptixstaging.johnsoncontrols.com/identity/issue/oauth2/token</a></p>
+<p><a class="jive-link-external-small" href="https://mypanoptixstaging.johnsoncontrols.com/identity/issue/oauth2/token">     https://mypanoptixstaging.johnsoncontrols.com/identity/issue/oauth2/token</a></p>
 <p></p>
-<p style="padding-left: 30px;">3. Add the following URL query string parameters:</p>
+<li>Add the following URL query string parameters:</li>
 <p></p>
-<p style="padding-left: 30px;">     grant_type=password</p>
+<p>     grant_type=password</p>
 <p></p>
-<p style="padding-left: 30px;">     username=[Freemium panoptix UserName]</p>
+<p>     username=[Freemium panoptix UserName]</p>
 <p></p>
-<p style="padding-left: 30px;">     password=[Freemium panoptix Password]</p>
+<p>     password=[Freemium panoptix Password]</p>
 <p></p>
-<p style="padding-left: 30px;"><span>     For example:</span></p>
+<p><span>     For example:</span></p>
 <p></p>
-<p style="padding-left: 30px;"><a href="https://mypanoptixstaging.johnsoncontrols.com/identity/issue/oauth2/token?grant_type=password&amp;username=test@example.com&amp;password=example/">     https://mypanoptixstaging.johnsoncontrols.com/identity/issue/oauth2/token?grant_type=password&amp;username=test@example.com&amp;password=example</a></p>
+<p><a href="https://mypanoptixstaging.johnsoncontrols.com/identity/issue/oauth2/token?grant_type=password&amp;username=test@example.com&amp;password=example/">     https://mypanoptixstaging.johnsoncontrols.com/identity/issue/oauth2/token?grant_type=password&amp;username=test@example.com&amp;password=example</a></p>
 <p></p>
-<p style="padding-left: 30px;">4. Add the header fields:</p>
+<li>Add the header fields:</li>
 <p></p>
-<p style="padding-left: 30px;">     Authorization: Basic [client_id:client_secret] must be base 64 encoded</p>
+<p>     Authorization: Basic [client_id:client_secret] must be base 64 encoded</p>
 <p></p>
-<p style="padding-left: 30px;">     Content-Type: application/json</p>
+<p>     Content-Type: application/json</p>
 <p></p>
-<p style="padding-left: 30px;"><img alt="Step Two_4.png" class="jive-image jive-image-thumbnail" src="/servlet/JiveServlet/downloadImage/102-2181-8-2984/Step+Two_4.png" width="620" __jive_id="2984" /></p>
+<p><img alt="Step Two_4.png" class="jive-image jive-image-thumbnail" src="/servlet/JiveServlet/downloadImage/102-2181-8-2984/Step+Two_4.png" width="620" __jive_id="2984" /></p>
 <p></p>
-<p style="padding-left: 30px;">5. Click &ldquo;Construct&rdquo; to build the Basic Authorization field and enter your Client_ID and Client_Secret.</p>
-<p style="padding-left: 30px;"></p>
-<p style="padding-left: 30px;"><img alt="Step Two_5.png" class="jive-image" src="/servlet/JiveServlet/downloadImage/102-2181-8-2977/Step+Two_5.png" __jive_id="2977" /></p>
-<p style="padding-left: 30px;"></p>
-<p style="padding-left: 30px;">6. Send the request and Copy the access_token field value to clipboard.</p>
-<p style="padding-left: 30px;"></p>
-<p style="padding-left: 30px;"><img alt="Step Two_6.png" class="jive-image jive-image-thumbnail" src="/servlet/JiveServlet/downloadImage/102-2181-8-2976/Step+Two_6.png" style="float: none;" width="620" __jive_id="2976" /></p>
+<li>Click &ldquo;Construct&rdquo; to build the Basic Authorization field and enter your Client_ID and Client_Secret.</li>
+<p></p>
+<p><img alt="Step Two_5.png" class="jive-image" src="/servlet/JiveServlet/downloadImage/102-2181-8-2977/Step+Two_5.png" __jive_id="2977" /></p>
+<p></p>
+<li>Send the request and Copy the access_token field value to clipboard.</li>
+<p></p>
+<p><img alt="Step Two_6.png" class="jive-image jive-image-thumbnail" src="/servlet/JiveServlet/downloadImage/102-2181-8-2976/Step+Two_6.png" style="float: none;" width="620" __jive_id="2976" /></p>
 <p></p>
 <h4>Three &ndash; Calling a Panoptix API</h4>
 <p></p>
-<p style="padding-left: 30px;">1. Create https GET request against this URL:</p>
+<ol>
+<li>Create https GET request against this URL:</li>
 <p></p>
-<p style="padding-left: 30px;"><a class="jive-link-external-small" href="https://api.mypanoptixstaging.johnsoncontrols.com/V1/Configuration/Meters">https://api.mypanoptixstaging.johnsoncontrols.com/V1/Configuration/Meters</a></p>
+<p><a class="jive-link-external-small" href="https://api.mypanoptixstaging.johnsoncontrols.com/V1/Configuration/Meters">https://api.mypanoptixstaging.johnsoncontrols.com/V1/Configuration/Meters</a></p>
 <p></p>
-<p style="padding-left: 30px;">2. Add the header field: Authorization: Bearer [access_token value].</p>
-<p style="padding-left: 30px;"></p>
-<p style="padding-left: 30px;"><img alt="Step Three_2.png" class="jive-image jive-image-thumbnail" src="/servlet/JiveServlet/downloadImage/102-2181-8-2987/Step+Three_2.png" width="620" __jive_id="2987" /></p>
-<p style="padding-left: 30px;"></p>
-<p style="padding-left: 30px;">3. Send the request.</p>
-<p style="padding-left: 30px;"></p>
+<li>Add the header field: Authorization: Bearer [access_token value].</li>
+<p></p>
+<p><img alt="Step Three_2.png" class="jive-image jive-image-thumbnail" src="/servlet/JiveServlet/downloadImage/102-2181-8-2987/Step+Three_2.png" width="620" __jive_id="2987" /></p>
+<p></p>
+<li>Send the request.</li>
+<p></p>
 <p style="padding-left: 30px;"><img alt="Step Three_3.png" class="jive-image" src="/servlet/JiveServlet/downloadImage/102-2181-8-2988/Step+Three_3.png" __jive_id="2988" /></p></body>
 
   </body>
