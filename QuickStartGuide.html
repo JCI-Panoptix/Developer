@@ -1,0 +1,84 @@
+<body><h2>Audience</h2>
+<p></p>
+<p>This is a quick start guide for developers who want to integrate the Panoptix&reg; API set into their application. This guide assumes you are familiar with the basic concepts of APIs, XML, HTTP request methods, and the REST style of software architecture. If you require further information after reading this guide, please documentation under the REST API Reference section</a>.</p>
+<p></p>
+<h2>Getting Started</h2>
+<p></p>
+<p>To get up and running quickly with the Panoptix APIs, perform the following steps:</p>
+<p></p>
+<ul>
+<li>Create an account (see step one below).</li>
+<li>Request an access token (see step two below).</li>
+<li>Make an API call (see step three below).</li>
+<li>Read the appropriate resources and reference material</a>.</li>
+<li>Integrate the desired results from the Panoptix API set into your app.</li>
+<li>Review the application submission  information, and submit your app!</li>
+</ul>
+<p></p>
+<h2>The Steps</h2>
+<p></p>
+<h4>One &ndash; Create a Panoptix Developer Center account.</h4>
+<p></p>
+<p style="padding-left: 30px;">1. <a href="https://developer.panoptix.com/signup">Sign up for API access.</a> Enter your user and company information.</p>
+<p style="padding-left: 30px;">2. Read and agree to the Johnson Controls, Inc. API Usage Agreement and click &ldquo;Sign Up.&rdquo;</p>
+<p style="padding-left: 30px;">3. Upon receiving approval via email (may take up to two business days), sign in to your account.</p>
+<p style="padding-left: 30px;">4. Under Sandbox, click &ldquo;View&rdquo; next to Demo app.</p>
+<p style="padding-left: 30px;"></p>
+<p style="padding-left: 30px;"><img alt="Step One_Select Applications.png"  src="https://github.com/JCI-Panoptix/Developer/images/TBD"></p>
+<p style="padding-left: 30px;"></p>
+<p style="padding-left: 30px;">5. Record the Client ID and Client Secret.</p>
+<p style="padding-left: 30px;"></p>
+<p style="padding-left: 30px;"><img alt="Step One_Record the Client ID and Client Secret.png" src="https://github.com/JCI-Panoptix/Developer/images/TBD" ></p>
+<p style="padding-left: 30px;"></p>
+<p style="padding-left: 30px;">6. Record your Freemium Panoptix Credential (username and password).</p>
+<p></p>
+<p style="padding-left: 30px;"><img alt="Step One_Record your Freemium.png" class="jive-image jive-image-thumbnail" src="/servlet/JiveServlet/downloadImage/102-2181-8-2985/Step+One_Record+your+Freemium.png" width="620" __jive_id="2985" /></p>
+<p></p>
+<h4>Two &ndash; Request access token.</h4>
+<p></p>
+<p style="padding-left: 30px;">1. Download and install <a href="https://chrome.google.com/webstore/detail/hgmloofddffdnphfgcellkdfbfbjeloo">Chrome Advanced Rest Client App</a>.</p>
+<p style="padding-left: 30px;">2. Create https POST request against the URL:</p>
+<p></p>
+<p style="padding-left: 30px;"><a class="jive-link-external-small" href="https://mypanoptixstaging.johnsoncontrols.com/identity/issue/oauth2/token">     https://mypanoptixstaging.johnsoncontrols.com/identity/issue/oauth2/token</a></p>
+<p></p>
+<p style="padding-left: 30px;">3. Add the following URL query string parameters:</p>
+<p></p>
+<p style="padding-left: 30px;">     grant_type=password</p>
+<p></p>
+<p style="padding-left: 30px;">     username=[Freemium panoptix UserName]</p>
+<p></p>
+<p style="padding-left: 30px;">     password=[Freemium panoptix Password]</p>
+<p></p>
+<p style="padding-left: 30px;"><span>     For example:</span></p>
+<p></p>
+<p style="padding-left: 30px;"><a href="https://mypanoptixstaging.johnsoncontrols.com/identity/issue/oauth2/token?grant_type=password&amp;username=test@example.com&amp;password=example/">     https://mypanoptixstaging.johnsoncontrols.com/identity/issue/oauth2/token?grant_type=password&amp;username=test@example.com&amp;password=example</a></p>
+<p></p>
+<p style="padding-left: 30px;">4. Add the header fields:</p>
+<p></p>
+<p style="padding-left: 30px;">     Authorization: Basic [client_id:client_secret] must be base 64 encoded</p>
+<p></p>
+<p style="padding-left: 30px;">     Content-Type: application/json</p>
+<p></p>
+<p style="padding-left: 30px;"><img alt="Step Two_4.png" class="jive-image jive-image-thumbnail" src="/servlet/JiveServlet/downloadImage/102-2181-8-2984/Step+Two_4.png" width="620" __jive_id="2984" /></p>
+<p></p>
+<p style="padding-left: 30px;">5. Click &ldquo;Construct&rdquo; to build the Basic Authorization field and enter your Client_ID and Client_Secret.</p>
+<p style="padding-left: 30px;"></p>
+<p style="padding-left: 30px;"><img alt="Step Two_5.png" class="jive-image" src="/servlet/JiveServlet/downloadImage/102-2181-8-2977/Step+Two_5.png" __jive_id="2977" /></p>
+<p style="padding-left: 30px;"></p>
+<p style="padding-left: 30px;">6. Send the request and Copy the access_token field value to clipboard.</p>
+<p style="padding-left: 30px;"></p>
+<p style="padding-left: 30px;"><img alt="Step Two_6.png" class="jive-image jive-image-thumbnail" src="/servlet/JiveServlet/downloadImage/102-2181-8-2976/Step+Two_6.png" style="float: none;" width="620" __jive_id="2976" /></p>
+<p></p>
+<h4>Three &ndash; Calling a Panoptix API</h4>
+<p></p>
+<p style="padding-left: 30px;">1. Create https GET request against this URL:</p>
+<p></p>
+<p style="padding-left: 30px;"><a class="jive-link-external-small" href="https://api.mypanoptixstaging.johnsoncontrols.com/V1/Configuration/Meters">https://api.mypanoptixstaging.johnsoncontrols.com/V1/Configuration/Meters</a></p>
+<p></p>
+<p style="padding-left: 30px;">2. Add the header field: Authorization: Bearer [access_token value].</p>
+<p style="padding-left: 30px;"></p>
+<p style="padding-left: 30px;"><img alt="Step Three_2.png" class="jive-image jive-image-thumbnail" src="/servlet/JiveServlet/downloadImage/102-2181-8-2987/Step+Three_2.png" width="620" __jive_id="2987" /></p>
+<p style="padding-left: 30px;"></p>
+<p style="padding-left: 30px;">3. Send the request.</p>
+<p style="padding-left: 30px;"></p>
+<p style="padding-left: 30px;"><img alt="Step Three_3.png" class="jive-image" src="/servlet/JiveServlet/downloadImage/102-2181-8-2988/Step+Three_3.png" __jive_id="2988" /></p></body>
