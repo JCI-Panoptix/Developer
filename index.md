@@ -1,4 +1,8 @@
---- layout: default title: Panoptix Developer Center subtitle: Develop Apps That Matter --- 
+--- 
+layout: default 
+title: Panoptix Developer Center 
+subtitle: Develop Apps That Matter 
+--- 
 
 ## Welcome to the Panoptix Developer Center
 This is your opportunity to start adding to the rapidly growing universe of building efficiency solutions. We provide you with an ever-expanding set of Application Programming Interfaces (APIs) and a community to collaborate with us and other developers. The Panoptix APIs use Representational State Transfer (REST) for getting data from the Panoptix platform. After connecting your app to [Panoptix](https://www.panoptix.com) you will be able to market and sell it in the [marketplace](https://whatspossible.johnsoncontrols.com/community/panoptix/apps), expanding your market reach to include the entire Panoptix customer base.
