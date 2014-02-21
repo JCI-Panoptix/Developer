@@ -1,7 +1,7 @@
 --- 
 layout: default 
-title: Panoptix Developer Center 
-subtitle: Develop Apps That Matter 
+title: Home
+resource: false
 --- 
 
 ## Welcome to the Panoptix Developer Center
@@ -23,7 +23,7 @@ The Panoptix® App Developer Program provides the framework for the development 
 To get up and running quickly with the Panoptix APIs, perform the following steps:
  
 1. Read the [Quick Start Guide](quickstartguide.html) to learn how to get an account, an access token, and make your first API call
-2. Review the [Panoptix API 101](APIV2) for essential information you need to start using the Panoptix APIs (Need Version 1? Go [here](APIV1).
+2. Review the [API Overview](APIV2) for essential information you need to start using the Panoptix APIs (Need Version 1? Go [here](APIV1)).
 3. Integrate the desired results from the Panoptix API set into your app.
 4. Review the [application submission](appsubmision.html) information, and submit your app!
 

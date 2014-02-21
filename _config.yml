@@ -2,3 +2,4 @@ name: Developer
 markdown: redcarpet
 pygments: true
 baseurl: /Developer
+category-list: [overview, current, previous]
