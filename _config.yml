@@ -3,4 +3,4 @@ markdown: redcarpet
 
 pygments: true
 
-base_url: /Developer
+base_url: Developer
