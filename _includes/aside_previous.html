@@ -1,41 +1,37 @@
 ﻿<aside id="sidebar">
           
           <!-- My Sidebar Elements -->
-                                  
-          	<p class="heading">Overview</p>
-           
-          <ul>
-              {% for p in site.pages %}
-        	      	
-        	      	{% if p.overview == true %}
-        	           	      
-        	      	<a {% if p.url == page.url %}class="active"{% endif %} href="{{ site.baseurl }}{{ p.url }}">{{ p.title }}</a>
-        	      	<p></p>
-        	      	{% endif %}   <!-- overview-p -->
-        	      
-              {% endfor %}
-              <p><a href="https://developer.panoptix.com/documentation/overview/pricing">Pricing</a></p>
-           </ul>
-           
+           <p><a href="{{ site.baseurl}}/index.html">Home</a></p>  
           
-        <p class="heading">Panoptix API</p>
+            
+        {% for cat in site.api-previous-category %}
+		
+			<p class="heading">{{ cat }}</p>
+			<ul>
+				{% for p in site.pages %}
+					{% if page.previous-version == true %}
+						{% for pc in page.categories %}
+							{% if pc == cat %}
+								<a {% if p.url == page.url %}class="active"{% endif %} href="{{ site.baseurl }}{{ p.url }}">{{ p.title }}</a>
+								<p></p>
+							{% endif %}   <!-- cat-match-p -->
+						{% endfor %}  <!-- page-category -->
+					{% endif %}   <!-- resource-p -->
+				{% endfor %} <!-- page -->
+			</ul>
 
-         <ul>
-           <p><a href="{{ site.baseurl }}/current">Current Version</a></p>
+		{% endfor %}  <!-- cat -->   
+           
+        <p class="heading">Other Resources</p>
 
-			<p><a href="{{ site.baseurl }}/previous">Previous Version</a></p>
-		</ul>
-          
-         <p class="heading">Other Resources</p>
-
-         <ul>
            <p><a href="{{ site.baseurl }}/references/complimentarydataproviders.html">Complimentary Data Providers</a></p>
 
 			<p><a href="https://whatspossible.johnsoncontrols.com/community/panoptix-developer-center">Developer Community and Support</a></p>
  
            <p><a href="https://whatspossible.johnsoncontrols.com/community/panoptix/apps">Application Marketplace</a></p>
-		</ul>
-         
+
+          
+          
           <a href="https://github.com/JCI-Panoptix/Developer/zipball/master" class="button">
             <small>Download</small>
             .zip file

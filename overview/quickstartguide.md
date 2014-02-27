@@ -1,8 +1,8 @@
 ---
 layout: default 
 title: Quick Start Guide 
-resource: true 
-categories: [overview] 
+overview: true 
+categories: [main]
 --- 
 
 ## Quick Start Guide

@@ -1,7 +1,7 @@
 --- 
-layout: default 
-title: Panoptix Developer Center 
-subtitle: Develop Apps That Matter 
+layout: apidoc 
+title: Current Version of APIs 
+current: true 
 --- 
 ## Version Two APIs 
 Home page for the V2 documentation 

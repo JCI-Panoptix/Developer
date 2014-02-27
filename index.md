@@ -1,7 +1,8 @@
 --- 
 layout: default 
 title: Home
-resource: false
+overview: true
+categories: [ main ]
 --- 
 
 ## Welcome to the Panoptix Developer Center

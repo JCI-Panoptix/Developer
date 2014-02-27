@@ -1,5 +1,9 @@
 name: Developer
 markdown: redcarpet
+redcarpet:
+  extensions: ["tables"]
+highlighter: pygments
 pygments: true
 baseurl: /Developer
-category-list: [overview, current, previous]
+category-list: [Main, Current, Previous, Reference]
+api-previous-category: [General, Building, Metering, Equipment, Energy]

@@ -1,8 +1,8 @@
 ---
 layout: default 
 title: Sandbox Environment 
-resource: true 
-categories: [overview] 
+overview: true
+categories: [main]
 --- 
 ##Sandbox Environment
 

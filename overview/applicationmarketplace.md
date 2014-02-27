@@ -1,8 +1,8 @@
 ---
 layout: default 
 title: Application Marketplace 
-resource: true 
-categories: [overview] 
+overview: true
+categories: [main]
 --- 
 ## Application Marketplace
 The Panoptix® app marketplace provides you the ability to market and sell your apps to Panoptix customers around the world. At the heart of the marketplace, customers will find a catalog of apps where they can search and browse apps developed by Johnson Controls and developers like you. This is a win-win for both you and customers: the rich catalog of apps makes the Panoptix solution much more compelling through its ever-expanding suite of apps. And the catalog gives you a clear, direct path to market.

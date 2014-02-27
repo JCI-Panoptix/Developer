@@ -1,8 +1,8 @@
 ---
 layout: default 
 title: App Development Rules 
-resource: true 
-categories: [overview] 
+overview: true
+categories: [main]
 --- 
 # App Development Rules
 
